@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Junhan Hu">
+
+
+
+
+
+
+
+<title>Robotics Guide | Robotics Guide</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Robotics Guide
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/MarkdownNotes">Gallery</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/robotics/">
+                            robotics
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                Robotics Guide
+            
+            
+        </div>
+        <span class="post-date">
+            Nov 28, 2024
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h2 id="这是什么"><a href="#这是什么" class="headerlink" title="这是什么"></a>这是什么</h2><p>机器人是一门有趣的学科，亲手实践并制作出一个能够按照你指令行动的机械，是一件非常有成就感的事情。如果你也有兴趣从头开始搭建一个机器人，这份指南可以帮你开个头。</p>
+<p>对于刚开始接触机器人的人来说，这的确是一个庞杂的世界，涉及软件、机械、电子和项目管理，每一项都充满挑战。我也曾从什么都不懂的阶段走过，所以写了这份指南，希望能帮助那些有兴趣进入机器人世界的人。</p>
+<p>本指南是一个简介，遵循自上而下的方式介绍机器人。我觉得这种方式对大多数人来说更自然，更符合直觉。</p>
+<p>看完指南后，你会在脑海中有个大概的框架，知道哪些知识是重要的，哪些是细枝末节。然后可以根据自己的兴趣和时间安排具体的学习。</p>
+<h2 id="这不是什么"><a href="#这不是什么" class="headerlink" title="这不是什么"></a>这不是什么</h2><p>这不是一份具体的学习指南，比如如何学习线性代数，如何学编程。不过，我会附上一些我曾经使用过的、觉得好用的链接和书籍供你参考。</p>
+<p>这也不是魔法书，看完后你不会突然获得从头制作四旋翼飞行器、机械臂或扫地机器人的能力。这些都需要长时间的学习和实践，来获得必要的知识和经验。</p>
+<h2 id="需要什么"><a href="#需要什么" class="headerlink" title="需要什么"></a>需要什么</h2><p>机器人所涉及的大部分知识都已在很大程度上开源，所以只要你有时间，总能学会。</p>
+<p>当然我相信有一些方法可以帮你更好地学习</p>
+<ol>
+<li><p><strong>学习的方法</strong>：机器人所需的知识非常多，因此劳逸结合、高效学习是很重要的一步。<a target="_blank" rel="noopener" href="https://www.coursera.org/learn/learning-how-to-learn">Learning How to Learn</a> 是一个免费的公开课，推荐你去学习。</p>
+</li>
+<li><p><strong>模块化的思维</strong>：也可以称为建模、抽象的思维。机器人涉及的知识面非常广，如何简化复杂的事物以减轻大脑负担呢？关键就在于模块化。举个例子，如果你在控制一个复合机器人，运动时既要考虑底盘的运动又要控制机械臂，系统非常复杂。那么我们可以：</p>
+<ol>
+<li>将电机的转速控制封装成一个模块，外界只需要输入一个速度指令，电机就能达到想要的速度</li>
+<li>底盘的移动方式封装成一个模块，外界只需输入前进、后退、转向等指令，底盘就能相应运动。</li>
+<li>将底盘的移动整体封装一个模块，外界只需要输入目标位置，底盘就能移动到相应的位置</li>
+</ol>
+<p>注意，每次封装后，抽象的层级就高了一层，你就不再需要考虑低层的实现（只要你实现正确）。通过不断地模块化，细节的复杂度逐渐被隐藏，你可以专注于更高层次的问题。</p>
+</li>
+</ol>
+<h2 id="机器人是什么"><a href="#机器人是什么" class="headerlink" title="机器人是什么"></a>机器人是什么</h2><p>简单来说，机器人就是一个控制硬件按预定目的动作的系统，所以它需要：</p>
+<ul>
+<li><p><strong>机械</strong>：用来执行动作的硬件，如移动底盘、四轴飞行器、机械臂等。这些硬件使我们能够与物理世界交互并改变它，就像人的肌肉。</p>
+<ul>
+<li>实际上是：各种物理材料，通常是刚体，上面有孔，能与电气系统连接。</li>
+<li>你需要做的：根据机器人的目的设计结构，确定哪些部位需要什么形状、材料特性，在什么地方打孔，用什么连接方式。有些材料可以直接购买（如轮胎、螺母螺丝等），有些则需要你自己画图加工（一般画CAD图，交给加工厂加工）。</li>
+</ul>
+</li>
+<li><p><strong>电气</strong>：包括电路、电机等组件。在当今的高度电子化世界中，电子系统能让机械动起来，通过传感器，机器人能够感知这个世界，就像人的神经系统和感受器。</p>
+<ul>
+<li>实际上是：电机、传感器（超声波、相机，红外），电池，电路板，电线，控制器</li>
+<li>你需要做的：根据机器人的功能需求，确定需要控制哪些部位及其性能，并在价格、大小、功耗和性能之间权衡取舍。例如，最大力矩大的电机往往功耗较大、体积较大、价格更高，你需要根据机器人的最大负载进行选择。</li>
+</ul>
+</li>
+<li><p><strong>控制</strong>：大多数机器人都有一个明确的目的，为实现这个目的，逻辑控制是必须的，它决定机器人在不同情况下如何行动，就像人的大脑</p>
+<ul>
+<li>实际上是：或长或短的代码，运行在控制器或电路板上（如C语言），或更高性能的计算平台上（如C++、Python）。</li>
+<li>你需要做的：逐级实现模块化控制，比如先控制电机转速，再控制轮胎速度，然后控制底盘的运动方式（前驱、后驱、差速等），接着是定位（知道自己的位置），再到导航（如何从A点到B点）。这些都需要复杂的算法来实现。</li>
+</ul>
+</li>
+</ul>
+<p>你可能已经发现，这三者紧密相关：电气限制机械的运动能力，机械和电气的设计又影响算法的可实现性，算法也影响传感器的布局，而传感器的位置反过来影响机械的设计等。因此，要实现一个高效的机器人系统，必然是一个不断迭代的过程，即使你经验丰富，也需要根据实际情况不断调整。</p>
+<h2 id="需要学什么"><a href="#需要学什么" class="headerlink" title="需要学什么"></a>需要学什么</h2><p>像ChatGPT这样的工具极大地扩展了我们的能力，许多零碎的知识可以即学即用。但是，要判断它给出的建议的合理性，仍然需要一定的基础知识。我列出了一些基础知识和较难掌握的知识，仍然是从三个方向入手：</p>
+<ul>
+<li>机械<ul>
+<li><strong>CAD</strong>画图：需要将你的想法转变为实际设计，即使只是复制别人的创作，也需要将实物转化为设计图。<a target="_blank" rel="noopener" href="https://www.solidworks.com/">SolidWorks</a>是比较常用的工具</li>
+<li><strong>基本的物理学</strong>（尤其是力学）：如果只是玩具机器人，可能不需要太多考虑，一方面负载小，普通材料足够，另一方面可以不计成本地使用更好的材料和电机。但一旦需要机器人承担实际工作，比如拾取物体、爬坡、负载且控制成本，就需要你分析如何在满足要求的情况下尽量使用“够用”的材料。</li>
+<li><strong>机器人学</strong>：传统的机器人学分为运动学和动力学。运动学描述的是相互连接的刚体之间如何影响对方的位置关系，例如通过DH参数求得机械臂末端的运动，或通过轮子位置求得差速底盘的速度。而动力学涉及阻力、重量和动力之间的关系，更为复杂。<a target="_blank" rel="noopener" href="https://petercorke.com/rvc/home/">Robotics, Vision and Control</a>机器人学有不同的流派，采用的符号也会有所不同，初期在还没搞懂之前建议只专注于一本书，避免混淆，这本Peter Croke的书涉及了机器人学的很多方面，是一本很好的教材</li>
+</ul>
+</li>
+<li>电气：大多数情况下，电气设备可以通过购买获取，市面上有从低级到高级的各种电子设备。<ul>
+<li><strong>数字电路</strong>：微处理器和控制器都基于数字电路，虽然大部分时候你可以购买集成好的设备，但在需要定制控制或集成时，你需要设计电路板，将电源、控制器、传感器等的电路结合在一起，而不是使用多个分散的电路板（当然，在制作原型时没有问题）。<a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/">MIT的公开课</a>深入浅出，介绍得很好，尤其是第一节课的导论提纲挈领，值得反复学习</li>
+<li><strong>电机</strong>：电机是机器人执行动作的核心之一。你需要了解电机的种类（如直流电机、步进电机和伺服电机）、它们的特点以及如何选择，不过这些可以在具体需要时再学，不会花太长时间。</li>
+<li><strong>传感器</strong>：基本上你需要什么样的信息，就去购买什么样的传感器。有些信息可以直接从传感器读取（如温度、速度、加速度），有些则需要通过算法从已知信息中计算（如当前位置、障碍物识别等）。</li>
+</ul>
+</li>
+<li>控制<ul>
+<li><strong>编程语言、数据结构、算法设计</strong>：编程可以说是机器人最为重要的一部分。有了机械和电气，机器人能够动起来，但它究竟能做什么，全靠代码来实现。<ul>
+<li><strong>编程语言</strong>：C++和Python是最常用的两种语言。C++性能最佳，很多开源机器人算法都是用C++实现的。而Python适合高层算法，底层部分可以通过调用库或者C++代码来实现，从而以小部分性能的损失换取更高的灵活性。<a target="_blank" rel="noopener" href="https://learnmoderncpp.com/">Learn Modern C++</a>学习现代C++的语法，起码学习C++11；<a target="_blank" rel="noopener" href="https://diveintopython3.problemsolving.io/">Dive Into Python 3</a>简短的Python介绍，一个晚上就可以看完</li>
+<li><strong>数据结构、算法</strong>：如果你只调用别人的库，这部分的重要性不太明显。但当你自己实现复杂数据处理时，合适的数据结构和算法能够大幅提高机器人处理频率。例如，障碍物检测每秒钟处理的图像数量可以从10张提高到60张，这就是性能的实际提升。<a target="_blank" rel="noopener" href="https://pll.harvard.edu/course/cs50-introduction-computer-science">CS50</a>哈佛的公开课，可以说是计算机科学的导论课，也涉及到了数据机构和算法</li>
+<li><strong>具体算法</strong>：障碍物检测、路径规划、避障等算法通常与机器人本身关系不大，只是用于实际问题中的解决方案而已。大部分都有现成的库和代码可以使用，通常你需要根据自己的需求对开源代码做相应修改。算法的复杂程度可能会非常复杂，要钻研的话每个算法都可以当成一个单独的科目去研究。<a target="_blank" rel="noopener" href="https://petercorke.com/rvc/home/">Robotics, Vision and Control</a>是Peter Croke的经典，写的很好，还提供了几乎所有经典算法的Matlab实现；<a target="_blank" rel="noopener" href="https://github.com/AtsushiSakai/PythonRobotics">PythonRobotics</a>一个开源的机器人算法库，都是纯Python实现，还会有可视化，值得学习。</li>
+</ul>
+</li>
+<li><strong>Linux系统、ROS</strong>：大多数机器人算法都运行在Linux系统上，因为配置环境更方便，且部署到开发板和远程控制更容易。你需要习惯用命令行与计算机交互。ROS（机器人操作系统）集成了大量的机器人库，很多算法在发布时都会提供ROS接口。<a target="_blank" rel="noopener" href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a>只看前6章基本就够了，可以明白Linux的基本工作原理和操作；<a target="_blank" rel="noopener" href="https://wiki.ros.org/ROS/Tutorials">ROS Tutorial</a>跟着官方的教程做一遍基本上就掌握ROS的使用了，ROS只是一个平台，在遇到极限之前不用过度深究。</li>
+<li><strong>控制原理</strong>：最常用的控制原理是PID控制，这在很多领域都有应用。理解控制的哲学思想尤为重要，首先要知道自己要控制什么，能控制什么，这两者之间有什么关系，然后再套用具体算法进行控制。<a target="_blank" rel="noopener" href="https://www.youtube.com/@BrianBDouglas/playlists">Brian Douglas</a>一个Youtube Channel, 用人话介绍控制原理</li>
+</ul>
+</li>
+<li><strong>数学</strong>：机器人控制、传感器处理、路径规划等各个方面都涉及大量的数学知识。以下是一些关键领域：<ul>
+<li><strong>线性代数</strong>：线性代数是机器人学的基础之一，特别是在描述空间中的变换、姿态表示（如旋转矩阵和四元数）以及多关节机械臂的位置计算中有广泛应用，学习线性代数对于很多机器人的其他相关课题也很重要，比如说计算机视觉、机器学习等，在现代，可以说高效的算法最后都是变成了矩阵运算，因此理解线性代数的计算非常重要，尤其是其代表的含义，将运算理解为坐标系和坐标的几何变化在初期会有很大帮助。<a target="_blank" rel="noopener" href="https://www.3blue1brown.com/topics/linear-algebra">3Blue1Brown</a>一个将矩阵运算都可视化了的视频博客，质量非常高，看完之后会对线性代数有更深的认识。</li>
+<li><strong>微积分</strong>：微积分对于理解运动学和动力学非常重要，尤其是涉及速度、加速度和力的变化时。例如，在路径规划和控制过程中，积分和微分运算常用于描述和预测机器人的状态变化，主要是用于推导机械和运动之间的关系，比如在四轮车模型中，车的速度和各个轮胎的速度之间的关系，就需要微积分来推导</li>
+<li><strong>概率与统计</strong>：在传感器数据处理中，尤其是涉及不确定性和噪声时，概率和统计是必不可少的工具。例如，使用卡尔曼滤波或粒子滤波来进行机器人定位和状态估计。</li>
+<li><strong>优化理论</strong>：机器人中的很多问题都可以看作是一个优化问题，例如最优路径规划、运动控制中的能耗最小化等。学习基本的优化方法（如梯度下降）有助于解决这些问题。</li>
+<li><strong>数值分析</strong>：许多机器人算法涉及大量数值计算，了解数值分析的方法和误差控制可以帮助你确保机器人系统的稳定性和准确性。</li>
+</ul>
+</li>
+</ul>
+<h2 id="保持学习"><a href="#保持学习" class="headerlink" title="保持学习"></a>保持学习</h2><p>机器人学科博大精深，上述只是一个基础框架。有了这个框架，你可以在实践中不断扩展和深化自己的知识，只要深究，总能学到新东西，乐趣无穷！</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+                Junhan Hu | 
+            
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>
