@@ -281,10 +281,10 @@ input {
   border: none;
 }
 body {
-  font-family: 'Inter', 'Noto Sans SC', helvetica, arial;
+  font-family: 'Inter', 'Noto Serif SC', helvetica, arial;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: #373633;
   background-color: #fff;
 }
@@ -431,10 +431,10 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .post-list-item .post-title {
   flex-grow: 1;
-  font-family: 'Inter', 'Noto Sans SC', helvetica, arial;
+  font-family: 'Inter', 'Noto Serif SC', helvetica, arial;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: #373633;
   font-variation-settings: 'wght' 500;
 }
@@ -446,7 +446,7 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 400;
   line-height: 1.25rem;
   color: #373633;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: #afaea9;
 }
 @media (max-width: 480px) {
@@ -481,6 +481,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .post-gallery-item .post-info .post-title {
   margin-bottom: 0.75rem;
+  font-family: 'Inter', 'Noto Sans SC';
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 2.25rem;
@@ -574,16 +575,17 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 2rem;
 }
 .profile .profile-content .profile-title {
+  font-family: 'Inter', 'Noto Sans SC';
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 2.25rem;
   color: #373633;
 }
 .profile .profile-content .profile-body {
-  font-family: 'Inter', 'Noto Sans SC', helvetica, arial;
+  font-family: 'Inter', 'Noto Serif SC', helvetica, arial;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: #373633;
 }
 .profile .profile-content .profile-link {
@@ -650,6 +652,7 @@ input[type="search"]::-webkit-search-results-decoration {
   color: #afaea9;
 }
 .search-result-container .search-result-title {
+  font-family: 'Inter', 'Noto Sans SC';
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.25rem;
@@ -671,10 +674,10 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-top: 1rem;
 }
 .search-result-container .search-result {
-  font-family: 'Inter', 'Noto Sans SC', helvetica, arial;
+  font-family: 'Inter', 'Noto Serif SC', helvetica, arial;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: #373633;
   color: #373633;
   margin-top: 0.5rem;
@@ -696,6 +699,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .search-header .search-input-container .search-input {
   width: 100%;
+  font-family: 'Inter', 'Noto Sans SC';
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25rem;
@@ -731,65 +735,71 @@ h6 {
   margin-bottom: 0.75rem;
 }
 h1 {
+  font-family: 'Inter', 'Noto Sans SC';
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 2.25rem;
   color: #373633;
 }
 h2 {
+  font-family: 'Inter', 'Noto Sans SC';
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
   color: #373633;
 }
 h3 {
+  font-family: 'Inter', 'Noto Sans SC';
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.5rem;
   color: #373633;
 }
 h4 {
+  font-family: 'Inter', 'Noto Sans SC';
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.25rem;
   color: #373633;
 }
 h5 {
+  font-family: 'Inter', 'Noto Sans SC';
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.25rem;
   color: #373633;
 }
 h6 {
+  font-family: 'Inter', 'Noto Sans SC';
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.25rem;
   color: #373633;
 }
 p {
-  font-family: 'Inter', 'Noto Sans SC', helvetica, arial;
+  font-family: 'Inter', 'Noto Serif SC', helvetica, arial;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: #373633;
 }
 strong {
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: #373633;
 }
 em {
   font-size: 1rem;
   font-weight: 400;
   font-style: italic;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: #373633;
 }
 del {
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 2rem;
   text-decoration: line-through;
   color: #373633;
 }
@@ -824,10 +834,10 @@ blockquote blockquote {
   margin-bottom: 0;
 }
 .post-content li {
-  font-family: 'Inter', 'Noto Sans SC', helvetica, arial;
+  font-family: 'Inter', 'Noto Serif SC', helvetica, arial;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: #373633;
   margin-top: 0.5rem;
 }
@@ -862,7 +872,7 @@ dl dt {
   padding: 0.5rem 0;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: #373633;
 }
 dl dt::after {
@@ -881,6 +891,7 @@ dl dd {
 }
 .post-head .post-info .post-title {
   margin-bottom: 0.75rem;
+  font-family: 'Inter', 'Noto Sans SC';
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 2.25rem;
@@ -1122,7 +1133,7 @@ ul li.task-list-item>input[type=checkbox]:before {
   left: 0;
   top: 0;
   width: 1.25rem;
-  height: 1.5rem;
+  height: 2rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: 0;
