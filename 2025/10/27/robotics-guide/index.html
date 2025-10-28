@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Junhan Hu">
+
+
+
+
+
+
+
+<title>Robotics for Beginners: A Plain-English Introduction | Robotics Guide</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Robotics Guide
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/MarkdownNotes">Gallery</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/robotics/">
+                            robotics
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                Robotics for Beginners: A Plain-English Introduction
+            
+            
+        </div>
+        <span class="post-date">
+            Oct 27, 2025
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h2 id="What-You’ll-Learn"><a href="#What-You’ll-Learn" class="headerlink" title="What You’ll Learn"></a>What You’ll Learn</h2><p>Robotics is interesting. Building a machine that acts on your command is an incredibly rewarding experience.</p>
+<p>For beginners, robotics can feel overwhelming. It spans software, mechanics, electronics, and project management. Each has its own challenges. I started from zero too, so I wrote this guide to help you step into robotics.</p>
+<p>This is a top-down overview. Start with the big picture, then drill down. Most beginners find that more intuitive.</p>
+<p>After reading, you’ll have a mental map. You’ll know which topics matter most and what is a minor detail. From there, you can dive deeper based on your interests and schedule.</p>
+<h2 id="What-We-Won’t-Cover"><a href="#What-We-Won’t-Cover" class="headerlink" title="What We Won’t Cover"></a>What We Won’t Cover</h2><p>This is not a step-by-step study plan. It won’t teach you linear algebra or programming from scratch. I will include links and books I’ve used and found helpful.</p>
+<p>This also isn’t a magic spellbook. You won’t build a quadcopter, robotic arm, or floor-cleaning robot overnight. Those projects take time, learning, and practice.</p>
+<h2 id="What-You-Need"><a href="#What-You-Need" class="headerlink" title="What You Need"></a>What You Need</h2><p>Most of the knowledge you need is open and widely available. If you can invest the time, you can learn it.</p>
+<p>A few habits will make learning far more effective:</p>
+<ol>
+<li><p><strong>Learn How to Learn.</strong> Robotics covers a lot, so efficiency matters. Balance effort and rest. The free course <strong><a target="_blank" rel="noopener" href="https://www.coursera.org/learn/learning-how-to-learn">Learning How to Learn</a></strong> is an excellent start.</p>
+</li>
+<li><p><strong>Modular thinking.</strong> Also called modeling or abstraction. Robotics spans many areas. Modularity helps you simplify complexity and reduce cognitive load.</p>
+<p>Imagine a compound robot with a mobile base and a manipulator. The system is complex. You can raise the level of abstraction with clean modules:</p>
+<ol>
+<li><strong>Motor-speed control</strong> as a module: input &#x3D; target speed; output &#x3D; motor holds that speed.</li>
+<li><strong>Base motion</strong> as a module: input &#x3D; forward&#x2F;backward&#x2F;turn; output &#x3D; base moves accordingly.</li>
+<li><strong>Whole-base navigation</strong> as a module: input &#x3D; target pose; output &#x3D; base drives to that pose.</li>
+</ol>
+<p>Each layer relies and hides lower-level detail (assuming it works). You can then focus on higher-level problems.</p>
+</li>
+</ol>
+<h2 id="What-Is-a-Robot"><a href="#What-Is-a-Robot" class="headerlink" title="What Is a Robot?"></a>What Is a Robot?</h2><p>Simply put, A robot is a system that controls hardware to act toward a goal. It usually needs three things:</p>
+<ul>
+<li><strong>Mechanics</strong> — hardware that executes motion: a mobile base, quadrotor, or robot arm. Hardware lets the robot change the physical world—like muscles.<ul>
+<li><strong>In reality, this means</strong>: Various physical materials, usually rigid bodies, with holes for connecting to the electrical system.</li>
+<li><strong>What you need to do</strong>: Design the structure based on the robot’s purpose. Determine the required shape, material properties, and connection methods for different parts. Some materials can be purchased directly (like tires, nuts, and bolts). Others require you to create drawings for manufacturing (usually <strong>Computer-Aided Design (CAD)</strong> drawings submitted to a fabrication plant).</li>
+</ul>
+</li>
+<li><strong>Electrical</strong> — circuits, motors, and components. Electronics make mechanics move. Sensors let robots perceive the world—like a nervous system.<ul>
+<li><strong>In reality, this means</strong>: Motors, sensors (ultrasonic, camera, infrared), batteries, circuit boards, wires, and controllers.</li>
+<li><strong>What you need to do</strong>: Based on the robot’s functional requirements, determine which parts need to be controlled and their performance specifications. You must make trade-offs between price, size, power consumption, and performance. For example, a motor with a high maximum torque often has higher power consumption, a larger size, and a higher price. You need to choose based on your robot’s maximum load.</li>
+</ul>
+</li>
+<li><strong>Control</strong>: Most robots have a clear purpose. To achieve this, logical control is essential. It determines how the robot acts in different situations, much like a brain.<ul>
+<li><strong>In reality, this means</strong>: Lines of code, short or long, running on a controller or circuit board (e.g., in C) or on a higher-performance computing platform (e.g., in C++, Python).</li>
+<li><strong>What you need to do</strong>: build control in layers: regulate motor speed → regulate wheel speed → control base motion (front-wheel, rear-wheel, differential, etc.) → <strong>localization</strong> (know where you are) → <strong>navigation</strong> (go from A to B). Each layer relies on more advanced algorithms.</li>
+</ul>
+</li>
+</ul>
+<p>These parts are tightly coupled. Electrical limits mechanical capability. Mechanical and electrical choices constrain algorithms. Algorithms influence sensor layout. Sensor placement feeds back into mechanical design. Building a good robot is iterative. Even if you are experienced, you will need to make constant adjustments based on the actual situation.</p>
+<h2 id="What-to-Learn"><a href="#What-to-Learn" class="headerlink" title="What to Learn"></a>What to Learn</h2><p>Tools like ChatGPT have greatly expanded our capabilities. Much of the fragmented knowledge can be learned and used on the fly. Still, you need foundations to judge suggestions. I have listed some fundamental and more difficult-to-master topics, approaching from four directions:</p>
+<ul>
+<li><p>Mechanics</p>
+<ul>
+<li><p><strong>CAD Drawing</strong>：Turn ideas into designs. Even copying an existing object requires drawings. You need to translate a physical object into a design drawing. <a target="_blank" rel="noopener" href="https://www.solidworks.com/">SolidWorks</a> is a commonly used tool.</p>
+</li>
+<li><p><strong>Basic Physics (especially mechanics)</strong>: For a toy robot, you might not need to consider this much. The loads are small, so standard materials are sufficient, and you can use better materials and motors without worrying about cost. But when a robot must perform actual work (like picking up objects or climbing hills), you must control costs. This requires analyzing how to meet requirements using “good enough” materials.</p>
+</li>
+<li><p><strong>Robotics</strong> (kinematics &amp; dynamics).</p>
+<ul>
+<li><strong>Kinematics:</strong> how connected rigid bodies set position and orientation. Arms often use <strong>Denavit–Hartenberg (DH) parameters</strong>. Mobile bases use wheel geometry (e.g., differential drive).</li>
+<li><strong>Dynamics:</strong> forces, weight, and resistance. It is more complex but essential for performance.</li>
+</ul>
+<p>Different texts use different conventions. Until you’re comfortable, stick with one to avoid confusion. A strong reference is <strong><a target="_blank" rel="noopener" href="https://petercorke.com/rvc/home/">Robotics, Vision and Control</a></strong> by <em>Peter Corke</em>.</p>
+</li>
+</ul>
+</li>
+<li><p>Electrical: (In most cases, electrical components can be purchased. The market offers a wide range of electronic devices, from basic to advanced.)</p>
+<ul>
+<li><strong>Digital Circuits</strong>: Microprocessors and controllers are based on digital circuits. While you can buy integrated devices, you’ll eventually need custom control. This means designing a single <strong>Printed Circuit Board (PCB)</strong>. The PCB combines power, controller, and sensor circuits, replacing multiple separate boards (which are fine for prototyping). <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/">MIT’s OpenCourseWare (OCW)</a> is excellent and well-explained. The introductory lecture provides a great overview and is worth reviewing.</li>
+<li><strong>Motors</strong>: Motors are one of the core components for a robot’s actions. You need to understand the types of motors (e.g., DC, stepper, and servo). Learn their characteristics and how to choose them. However, you can learn this on demand.</li>
+<li><strong>Sensors</strong>: Basically, you buy the sensor that provides the information you need. Some information can be read directly (like temperature, speed, acceleration). Other information needs to be calculated from known data via algorithms (like current position, obstacle recognition, etc.).</li>
+</ul>
+</li>
+<li><p>Control (Software)</p>
+<ul>
+<li><strong>Programming Languages, Data Structures, Algorithm Design</strong>: Programming is arguably the most important part of robotics. With mechanics and electronics, the robot can move, but what it <em>does</em> is entirely determined by code.<ul>
+<li><strong>Languages.</strong> C++ and Python are most common. C++ offers performance, and many libraries use it. Python is great for higher-level logic. Use libraries or C++ bindings for low-level parts when needed, this trades a small amount of performance for greater flexibility. See <strong><a target="_blank" rel="noopener" href="https://learnmoderncpp.com/">Learn Modern C++</a></strong> (C++11), and <strong><a target="_blank" rel="noopener" href="https://diveintopython3.problemsolving.io/">Dive Into Python 3</a></strong> (short and approachable, you can finish in one evening).</li>
+<li><strong>Data structures &amp; algorithms.</strong> If you only call libraries, this seems less critical. But heavy data processing depends on it. The right structures and algorithms can raise throughput dramatically (e.g., obstacle detection from 10 FPS to 60 FPS, from useless to usable in realtime application). A solid intro is <strong><a target="_blank" rel="noopener" href="https://pll.harvard.edu/course/cs50-introduction-computer-science">Harvard CS50</a></strong>.</li>
+<li><strong>Applied algorithms.</strong> Obstacle detection, path planning, and collision avoidance are general problem-solving tools. Many have ready libraries, but typically need to modify open-source code to fit your needs. These algorithms can be extremely complex, and each one could be studied as a separate subject. See <strong><a target="_blank" rel="noopener" href="https://petercorke.com/rvc/home/">Robotics, Vision and Control</a></strong> for MATLAB examples and <strong><a target="_blank" rel="noopener" href="https://github.com/AtsushiSakai/PythonRobotics">PythonRobotics</a></strong> for clean Python demos with visualization.</li>
+</ul>
+</li>
+<li><strong>Linux &amp; ROS.</strong> Most robotics stacks run on Linux. It simplifies environment setup, single-board deployment, and remote control. Get comfortable with the command line. <strong>ROS (Robot Operating System)</strong> integrates many libraries, and many algorithms ship with ROS interfaces. <strong><a target="_blank" rel="noopener" href="https://linuxcommand.org/tlcl.php">The Linux Command Line</a></strong> (the first six chapters are enough) and <strong><a target="_blank" rel="noopener" href="https://wiki.ros.org/ROS/Tutorials">ROS Tutorials</a></strong> will get you productive. Treat ROS as a platform. Don’t over-optimize it until you hit real limits.</li>
+<li><strong>Control theory.</strong> Control is everywhere. The most simple but effective one is <strong>Proportional-Integral-Derivative (PID)</strong> control. More important is the mindset: decide what you want to control, what you can command, and how they relate. Then choose algorithms. <a target="_blank" rel="noopener" href="https://www.youtube.com/@BrianBDouglas/playlists">Brian Douglas</a> has a YouTube channel that explains control theory in plain English.</li>
+</ul>
+</li>
+<li><p><strong>Mathematics</strong>: Robotics control, sensor processing, path planning, and all other aspects involve a significant amount of mathematics. Here are some key areas:</p>
+<ul>
+<li><strong>Linear Algebra</strong>: This is a cornerstone of robotics, especially for describing transformations in space. This includes representing pose (like rotation matrices and quaternions) and calculating the position of multi-joint robotic arms. It also underpins vision and machine learning you will need inevitably. Visualizing operations as geometric changes of coordinate systems and coordinates is very helpful in the beginning. <a target="_blank" rel="noopener" href="https://www.3blue1brown.com/topics/linear-algebra">3Blue1Brown’s</a> linear algebra series is excellent.</li>
+<li><strong>Calculus.</strong> Needed for kinematics and especially dynamics—rates of change of velocity, acceleration, and force. In planning and control, integration and differentiation describe and predict state changes (e.g., relating car-body velocity to wheel speeds).</li>
+<li><strong>Probability &amp; Statistics</strong>: These are indispensable tools for sensor data processing, especially when dealing with uncertainty and noise. For example, using a Kalman filter or particle filter for robot localization and state estimation.</li>
+<li><strong>Optimization.</strong> Many robotics problems are optimization problems—shortest paths, minimum-energy control, and more. Learn basic methods such as gradient descent.</li>
+<li><strong>Numerical Analysis</strong>: Many robotics algorithms involve extensive numerical calculations. Understanding numerical methods and error control improves stability and accuracy.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Keep-Learning"><a href="#Keep-Learning" class="headerlink" title="Keep Learning"></a>Keep Learning</h2><p>Robotics is vast. This guide is a framework. Use it to expand your knowledge through practice. If you keep digging, you’ll always find something new—and that’s the fun part!</p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <!-- <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2024/12/07/mind-map/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+ -->
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+                Junhan Hu | 
+            
+                
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+    
+
+  </body>
+</html>
